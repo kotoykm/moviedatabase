@@ -1,0 +1,13 @@
+<h1>¡Bienvenid@ a la sección de documentales!</h1>
+<hr>
+<div class="row mt-4">
+    <div class="col-6">
+        <% @docu.each do |d| %>
+            <p class="fw-700 fs-5">Serie n°<%=d.id%></p>
+            <p class="fw-300"> <span class="fw-600">Nombre: </span> <%=d.name%></p>
+            <p class="fw-300"> <span class="fw-600">Sinopsis: </span> <%=d.synopsis%></p>
+            <p class="fw-300"> <span class="fw-600">Director: </span> <%=d.director%></p>
+            <hr>
+        <%end%>
+    </div>
+</div>

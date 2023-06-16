@@ -1,0 +1,13 @@
+<h1>¡Bienvenid@ a la sección de series!</h1>
+<hr>
+<div class="row mt-4">
+    <div class="col-6">
+        <% @serie.each do |s| %>
+            <p class="fw-700 fs-5">Serie n°<%=s.id%></p>
+            <p class="fw-300"> <span class="fw-600">Nombre: </span> <%=s.name%></p>
+            <p class="fw-300"> <span class="fw-600">Sinopsis: </span> <%=s.synopsis%></p>
+            <p class="fw-300"> <span class="fw-600">Director: </span> <%=s.director%></p>
+            <hr>
+        <%end%>
+    </div>
+</div>

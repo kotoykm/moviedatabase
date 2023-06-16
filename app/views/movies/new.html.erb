@@ -1,0 +1,26 @@
+<h1>Nueva Película</h1>
+<p>Ingrese los datos solicitados</p>
+<hr>
+
+<%= form_with url: '/../movies/create', model:@movie, method: :post do |form| %>
+    <div class="col-4">
+        <div class="mb-4 mt-4" >
+            <%= form.label :name, "Nombre", class: "form-label fs-5 fw-300" %>
+            <%= form.text_field :name, name: "movie[name]", class: "form-control"  %>
+        </div>
+
+        <div class="mb-4" >
+            <%= form.label :synopsis, "Sinopsis", class: "form-label fs-5 fw-300" %>
+            <%= form.text_field :synopsis, name: "movie[synopsis]", class: "form-control"%>
+        </div>
+
+        <div class="mb-4" >
+            <%= form.label :director, "Director", class: "form-label fs-5 fw-300" %>
+            <%= form.text_field :director, name: "movie[director]", class: "form-control" %>
+        </div>
+
+        <div class="mb-4" >
+            <%=form.submit "Ingresar", class: "btn btn-light bg-red text-snow" %>
+        </div>
+    </div>
+<%end%>

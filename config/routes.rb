@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+#PELIS-------------------------------------
+  get 'movie/inicio', to: 'movies#index'
+  get 'movie/formulario', to: 'movies#new'
+  get 'movie/movie_created', to: 'movies#success'
+#SERIES-------------------------------------
+  get 'serie/inicio', to: 'series#index'
+  get 'serie/formulario', to: 'series#new'
+  get 'serie/serie_creaded', to: 'series#success'
+#DOCUS-------------------------------------
+  get 'docu/inicio', to: 'documentaryfilms#index'
+  get 'docu/formulario', to: 'documentaryfilms#new'
+  get 'docu/docu_created', to: 'documentaryfilms#success'
+#-------------------------------------
+#POST
+  post 'documentaryfilms/create', to: 'documentaryfilms#create'
+  post 'series/create', to: 'series#create'
+  post 'movies/create', to: 'movies#create'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'overviews#index'
 end

@@ -1,0 +1,13 @@
+<h1>¡Bienvenid@ a la sección de películas!</h1>
+<hr>
+<div class="row mt-4">
+    <div class="col-6">
+        <% @movie.each do |m| %>
+            <p class="fw-700 fs-5">Película n°<%=m.id%></p>
+            <p class="fw-300"> <span class="fw-600">Nombre: </span> <%=m.name%></p>
+            <p class="fw-300"> <span class="fw-600">Sinopsis: </span> <%=m.synopsis%></p>
+            <p class="fw-300"> <span class="fw-600">Director: </span> <%=m.director%></p>
+            <hr>
+        <%end%>
+    </div>
+</div>
